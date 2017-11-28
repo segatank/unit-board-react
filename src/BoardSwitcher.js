@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './BoardSwitcher.css';
-import Checkbox from './Checkbox'
+import Checkbox from './Checkbox';
+
 const togglerItems = [
   'Move',
   'Edit'
