@@ -34,21 +34,17 @@ class BoardSwitcher extends Component {
     togglerItems.map(this.createCheckbox)
   )
 
-  handleFormSubmit = formSubmitEvent => {
+  /*handleFormSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
-
     for (const checkbox of this.selectedCheckboxes) {
       console.log(checkbox, ' is selected.');
     }
-  }
+  }*/
 
   render() {
     return (
       <div className="BoardSwitcher">
-        <form onSubmit={this.handleFormSubmit}>
-          {this.createCheckboxes()}
-          <button className="btn btn-default" type="submit">Click</button>
-        </form>
+
       </div>
     )
   }

@@ -1,7 +1,10 @@
 
 .BaseBoard {
-  width: 1000px;
-  height: 650px;
+  width: 800px;
+  height: 380px;
   background-color: #b3b3b3;
-  margin:0 auto;
+  margin: 200px auto;
+  border-style: outset;
+  border-width: 10px;
+  border-color: black;
 }
