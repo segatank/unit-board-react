@@ -5,10 +5,10 @@ class CellUnit extends Component {
 
   render() {
     return (
-      <div className="CellSkin">
-
-      </div>
-    )
+      <button className="CellSkin">
+        {this.props.value}
+      </button>
+    );
   }
 }
 
