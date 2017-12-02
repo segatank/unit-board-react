@@ -12,9 +12,10 @@ let positionY = 0;
 
 class BoardMatrix extends Component {
 
-  renderCell(i) {
+  renderCell(i, j) {
     return (
       <CellUnit
+        key = {i.toString()+ j.toString()}
         value={this.props[i]}
         onClick={() => this.props.onClick(i)}
       />
@@ -23,19 +24,15 @@ class BoardMatrix extends Component {
 
 
   render() {
+    let matrix = [];
+    for (let x = 0; x < MatrixSize.defWidth; x++) {
+      for (let y = 0; y < MatrixSize.defHeight; y++) {
+        matrix.push(this.renderCell(x, y));
+      }
+    }
     return (
       <div className="square">
-         <div className="board-row">
-           {this.renderCell(0)}
-           {this.renderCell(1)}
-           {this.renderCell(2)}
-         </div>
-         
-           {this.renderCell(3)}
-           {this.renderCell(4)}
-           {this.renderCell(5)}
-
-
+         {matrix}
       </div>
     )
   }

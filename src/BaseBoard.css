@@ -1,9 +1,36 @@
-.BaseBoard {
+.BoardTable {
   width: 800px;
   height: 380px;
   background-color: #b3b3b3;
   margin: 200px auto;
   border-style: outset;
   border-width: 10px;
+  border-color: black;
+}
+
+.TogglerWrapper {
+  width: 90px;
+  height: 100px;
+  background-color: #b3b3b3;
+  border-style: inset;
+  border-width: 2px;
+  border-color: black;
+}
+
+.UnitPanelWrapper {
+  width: 90px;
+  height: 262px;
+  background-color: #b3b3b3;
+  border-style: inset;
+  border-width: 2px;
+  border-color: black;
+}
+
+.MatrixWrapper {
+  width: 692px;
+  height: 370px;
+  background-color: #b3b3b3;
+  border-style: inset;
+  border-width: 2px;
   border-color: black;
 }
