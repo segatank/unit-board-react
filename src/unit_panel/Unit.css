@@ -1,0 +1,41 @@
+.Miniature {
+  height: 18px;
+  width: 18px;
+  background-repeat: no-repeat;
+}
+
+.Player {
+  background-image: url("./units_imgs/player.jpg");
+}
+
+.Enemy {
+  background-image: url("./units_imgs/enemy.jpg");
+}
+
+.Item {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.Building {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.Trap {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.PointOfInterest {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.Terrain {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.Plant {
+  background-image: url("./units_imgs/terrain.jpg");
+}
+
+.Critter {
+  background-image: url("./units_imgs/terrain.jpg");
+}

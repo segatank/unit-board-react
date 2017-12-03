@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './BaseBoard.css';
 import BoardSwitcher from './switcher/BoardSwitcher';
 import BoardMatrix from './board_matrix/BoardMatrix';
-//import UnitPanel from './unit_panel/UnitPanel';
+import UnitPanel from './unit_panel/UnitPanel';
 
 class BaseBoard extends Component {
 
@@ -12,9 +12,16 @@ class BaseBoard extends Component {
     );
   }
 
+  renderUnitPanel () {
+    return(
+      <UnitPanel/>
+    );
+  }
+
   renderMatrix() {
-    return( <div> mm</div>
-      //{BoardMatrix}
+    return( <div>
+      {BoardMatrix}
+      </div>
     );
   }
 
@@ -22,21 +29,23 @@ class BaseBoard extends Component {
     return (
       <div className="BoardTable">
         <table>
-          <tr>
-            <td>
-              <div className="TogglerWrapper">
-                {this.renderSwitcher(0)}
-              </div>
-              <div className="UnitPanelWrapper">
-                place holder unit
-              </div>
-            </td>
-            <td>
-              <div className="MatrixWrapper">
-                {this.renderMatrix()}
-              </div>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <div className="TogglerWrapper">
+                  {this.renderSwitcher (0)}
+                </div>
+                <div className="UnitPanelWrapper">
+                  {this.renderUnitPanel ()}
+                </div>
+              </td>
+              <td>
+                <div className="MatrixWrapper">
+                  {this.renderMatrix ()}
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );

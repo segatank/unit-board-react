@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './Unit.css';
 
+
 class Unit extends Component {
   render() {
-    return (
-      <div>unit dummy
+    return
+      <div className="Miniature-{this.props.unitType}">
       </div>
-    );
+    //<h1>Hello, {this.props.name}</h1>;
   }
 }
 
