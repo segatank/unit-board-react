@@ -5,11 +5,11 @@ import Unit from './Unit';
 const unitsArr = [
   "Player",
   "Enemy",
+  "Terrain",
   "Item",
   "Building",
   "Trap",
   "PointOfInterest",
-  "Terrain",
   "Plant",
   "Critter"
 ]

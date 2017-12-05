@@ -12,24 +12,23 @@ let positionY = 0;
 
 class BoardMatrix extends Component {
 
-  renderCell(i, j) {
+  renderCell(props) {
     return (
       <CellUnit
-        key = {i.toString()+ j.toString()}
-        value={this.props[i]}
-        onClick={() => this.props.onClick(i)}
+        key = {props.iVal+props.jVal}
+        value={props.iVal}
       />
     );
   }
 
-
   render() {
+    const bg = this.props.edit ? "green" : ""
     return (
-      <table>
+      <table style={{backgroundColor: bg}}>
         <tr>
-          <td>{this.renderCell(0,1)}</td>
-          <td>{this.renderCell(1,1)}</td>
-          <td>{this.renderCell(2,1)}</td>
+          <td>{this.renderCell({iVal: 0, jVal:1})}</td>
+          <td>{this.renderCell({iVal: 1, jVal:1})}</td>
+          <td>{this.renderCell({iVal: 2, jVal:1})}</td>
         </tr>
       </table>
     );

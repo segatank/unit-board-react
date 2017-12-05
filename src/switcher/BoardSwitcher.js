@@ -10,34 +10,16 @@ const togglerItems = [
 
 class BoardSwitcher extends Component {
 
-  componentWillMount = () => {
-    this.selectedCheckboxes = new Set();
-  }
 
-  toggleCheckbox = label => {
-    if (this.selectedCheckboxes.has(label)) {
-      this.selectedCheckboxes.delete(label);
-    } else {
-      this.selectedCheckboxes.add(label);
-    }
-  }
-
-  createCheckbox = label => (
-    <Checkbox
-      label={label}
-      handleCheckboxChange={this.toggleCheckbox}
-      key={label}
-    />
-  )
-
-  createCheckboxes = () => (
-    togglerItems.map(this.createCheckbox)
-  )
 
   render() {
     return (
       <div className="BoardSwitcher">
-        {this.createCheckboxes()}
+        <Checkbox
+          label={"edit"}
+          handleCheckboxChange={this.props.editToggler}
+          checked={this.props.edit}
+        />
       </div>
     )
   }

@@ -5,25 +5,17 @@ import BoardMatrix from './board_matrix/BoardMatrix';
 import UnitPanel from './unit_panel/UnitPanel';
 
 class BaseBoard extends Component {
-
-  renderSwitcher(i) {
-    return (
-      <BoardSwitcher/>
-    );
+  constructor (props) {
+    super(props);
+    this.state = {
+      "edit" : false
+    }
   }
 
-  renderUnitPanel () {
-    return(
-      <UnitPanel/>
-    );
+  editToggler = () => {
+    this.setState({edit : !this.state.edit});
   }
 
-  renderMatrix() {
-    return( <div>
-      {BoardMatrix}
-      </div>
-    );
-  }
 
   render() {
     return (
@@ -33,15 +25,20 @@ class BaseBoard extends Component {
             <tr>
               <td>
                 <div className="TogglerWrapper">
-                  {this.renderSwitcher (0)}
+                    <BoardSwitcher
+                      editToggler = {this.editToggler}
+                      edit = {this.state.edit}
+                     />
                 </div>
                 <div className="UnitPanelWrapper">
-                  {this.renderUnitPanel ()}
+                  <UnitPanel/>
                 </div>
               </td>
               <td>
                 <div className="MatrixWrapper">
-                  {this.renderMatrix ()}
+                  <BoardMatrix
+                    edit = {this.state.edit}
+                  />
                 </div>
               </td>
             </tr>
