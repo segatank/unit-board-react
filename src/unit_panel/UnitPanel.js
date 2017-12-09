@@ -17,16 +17,10 @@ const boardUnits = [
 
 class UnitPanel extends Component {
 
-  /*renderUnit (type) {
-    return (
-      <Unit
-        unitType={type}
-      />
-    );
-  }*/
-  //<div>{typeOfUnit}</div>
   createSingleUnit = typeOfUnit => (
-    <div>{typeOfUnit}</div>
+    <Unit
+      unitType={typeOfUnit}
+    />
   )
 
   fillPanelWithUnits = () => (

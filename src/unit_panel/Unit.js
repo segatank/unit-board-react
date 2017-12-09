@@ -3,13 +3,14 @@ import './Unit.css';
 
 
 class Unit extends Component {
-  render() {
-    return
-      <div className="Miniature" >
-        "zazazaza"
-        //{this.props.unitType}
+
+  render (props) {
+    const classImg = this.props.unitType;
+    return (
+      <div className={`Miniature ${classImg}`}>
+        <div>{this.props.unitType}</div>
       </div>
-    //<h1>Hello, {this.props.name}</h1>;
+    )
   }
 }
 
