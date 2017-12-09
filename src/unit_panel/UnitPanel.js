@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import './UnitPanel.css';
 import Unit from './Unit';
 
-const unitsArr = [
+const boardUnits = [
   "Player",
   "Enemy",
-  "Terrain",
-  "Item",
+  "Terrain"
+]
+/*  "Item",
   "Building",
   "Trap",
   "PointOfInterest",
   "Plant",
   "Critter"
-]
+]*/
 
 class UnitPanel extends Component {
 
@@ -23,11 +24,19 @@ class UnitPanel extends Component {
       />
     );
   }*/
+  //<div>{typeOfUnit}</div>
+  createSingleUnit = typeOfUnit => (
+    <div>{typeOfUnit}</div>
+  )
+
+  fillPanelWithUnits = () => (
+    boardUnits.map(this.createSingleUnit)
+  )
 
   render() {
     return (
-      <div>"test"
-
+      <div>
+        {this.fillPanelWithUnits()}
       </div>
     );
   }

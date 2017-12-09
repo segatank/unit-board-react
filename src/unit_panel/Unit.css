@@ -1,6 +1,9 @@
 .Miniature {
   height: 18px;
   width: 18px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
   background-repeat: no-repeat;
 }
 

@@ -10,8 +10,6 @@ const togglerItems = [
 
 class BoardSwitcher extends Component {
 
-
-
   render() {
     return (
       <div className="BoardSwitcher">

@@ -26,9 +26,9 @@ class BoardMatrix extends Component {
     return (
       <table style={{backgroundColor: bg}}>
         <tr>
-          <td>{this.renderCell({iVal: 0, jVal:1})}</td>
-          <td>{this.renderCell({iVal: 1, jVal:1})}</td>
           <td>{this.renderCell({iVal: 2, jVal:1})}</td>
+          <td>{this.renderCell({iVal: 4, jVal:1})}</td>
+          <td>{this.renderCell({iVal: 8, jVal:1})}</td>
         </tr>
       </table>
     );
